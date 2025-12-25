@@ -1,0 +1,268 @@
+/* ----------------------------- */
+/* VARIABLES / COLORS */
+:root {
+  --bg: #2c2a47;
+  --text: #eac2d2;
+  --accent: #8e003d;
+  --card: #c65344;
+  --card-hue: var(--accent);
+
+  --btn-bg: #2a3db9;
+  --btn-text: #bdb8e7;
+}
+
+/* ----------------------------- */
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding-top: 60px; /* navbar height */
+}
+
+
+.caution-tape {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+
+  --stripe: 30px;
+  --angle: 45deg;
+
+  background:
+    repeating-linear-gradient(
+      var(--angle),
+      rgba(255,255,0,0.5) 0 calc(var(--stripe)),
+      rgba(0,0,0,0.5) calc(var(--stripe)) calc(var(--stripe) * 2)
+    );
+
+  background-size:
+    calc((var(--stripe) * 2) / cos(var(--angle))) 100%;
+
+  animation: slide 40s linear infinite;
+
+  color: var(--accent);
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 7px;
+}
+
+@keyframes slide {
+  from { background-position: 0 0; }
+  to   { background-position: 100% 0; }
+}
+
+
+
+
+
+/* ----------------------------- */
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: var(--card);
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.nav-left {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-right {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-right a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-right a:hover {
+  color: var(--accent);
+}
+
+/* ----------------------------- */
+/* PAGE SECTIONS */
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+/* HERO */
+/* .hero {
+  max-width: 100%;
+  width: 95%;
+  background-color: aqua;
+  padding: 4rem 0;
+} */
+
+.hero-bg {
+  max-width: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(39, 3, 14), rgba(255, 0, 0, 0));
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons .btn {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-buttons .btn:hover {
+  background: var(--accent);
+  color: var(--card);
+}
+
+/* PROJECTS */
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.section h2 {
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+
+
+
+.project-card {
+  position: relative;
+  /* background: var(--card); */
+  display:flex;
+  flex-direction: column;
+  flex-basis: calc(33.33% - 2rem);
+  flex-grow: 1; 
+
+  background: linear-gradient(
+    to bottom,
+    var(--card) 0%,
+    var(--card) 60%,
+    var(--card-hue) 100%
+  );
+
+  padding: 1.5rem;
+  border-radius: 20px;
+  flex: wrap;
+}
+
+.card-decoration img {
+  position: absolute;
+  width: 100px;
+  height: auto; 
+  /* background-color: yellowgreen; */
+  top: -60px;
+  right: 20px; 
+  mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+  /* z-index: 10; */
+  
+}
+
+/* .project-card img {
+  width: 150px;
+  height: 150px;
+  border: #2c2a47 solid 5px;
+  
+  object-fit:cover;
+} */
+
+.project-card h3 {
+  color: var(--accent);
+}
+
+.project-card h3, p {
+  margin-bottom: 0.5rem;
+}
+
+.tech-list {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: var(--text);
+  background-color: var(--accent);
+  border-radius: 5px;
+  padding: 0.1rem 0.7rem;
+
+  margin-top: auto;
+  align-self: space-between;
+  align-self: flex-start;
+}
+
+.btn-small {
+  padding: 0.3rem 0.7rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  /* margin-top: auto;
+  align-self: space-between; */
+  align-self: flex-end;
+
+}
+
+.btn-small:hover {
+  background: var(--accent);
+  color: var(--card);
+}
+
+/* RESUME */
+.resume a.btn {
+  margin-top: 1rem;
+}
+
+/* SKILLS */
+.skills p {
+  margin-bottom: 0.5rem;
+}
+
+/* CONTACT */
+.contact a {
+  color: var(--accent);
+}

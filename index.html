@@ -1,9 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Portfolio Title</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="icon" type="image/ico" href="/media/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <h1>Header</h1>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">PORTFOLIO</div>
+    <ul class="nav-right">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN PAGE CONTENT -->
+  <main class="page">
+
+    <!-- TAPE -->
+    <div class="caution-tape">WEBSITE IS STILL UNDER CONSTRUCTION</div>
+
+    <!-- HERO / INTRO -->
+    <section id="hero" class="hero-bg">
+      <div class="section hero">
+        <h1>Hi, I'm Yasmina Hanafiah !</h1>
+        <p>Software Engineering Graduate | I build systems and software</p>
+        <p>Welcome to my portfolio+resume website! It is still under construction.
+          <span> <br>
+            <i><small>p/s : some of you might know me as Tomatoe</i></small> 
+          </span>
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#resume" class="btn">View Resume</a>
+          <a href="https://github.com/TomatoeNimcha" class="btn">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <h2>Projects</h2>
+
+      <div class="project-cards">
+
+        <!-- <div class="project-card">
+          <img src="media/reqconflict.png" alt="Requirement Conflict Detection Screenshot" />
+          <h3>Project Title</h3>
+          <p>Offline desktop application that does amazing things such as fantastic things.</p>
+          <p class="tech-list"><strong>Tech:</strong> Python, PySide6, spaCy (NLP)</p>
+          <a href="#" class="btn-small">GitHub</a>
+        </div> -->
+
+        <div class="project-card">
+          <div class="card-decoration"><img src="media/leaves.png"></div>
+          <!-- <img src="media/reqconflict.png" alt="Requirement Conflict Detection Screenshot" /> -->
+          <h3>Requirement Conflict Detection</h3>
+          <p>Offline desktop application  that automatically detects conflicts in software requirement documents.</p>
+          <p class="tech-list"><strong>Uses:</strong> Python, PySide6, spaCy (NLP)</p>
+          <a href="https://github.com/TomatoeNimcha/Requirement-Conflict-Detection" target="_blank" rel="noopener noreferrer" class="btn-small">GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <div class="card-decoration"><img src="media/leaves.png"></div>
+          <h3>Coding Language Using C++</h3>
+          <p>An attempt at creating basic language with data structures using C++ language.</p>
+          <p class="tech-list"><strong>Uses:</strong> C++</p>
+          <a href="https://github.com/TomatoeNimcha/Programming-Language-With-CPP" target="_blank" rel="noopener noreferrer" class="btn-small">GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <div class="card-decoration"><img src="media/leaves.png"></div>
+          <h3>Web Design about cats</h3>
+          <p>Studying Figma web designer application with cats as inspiration.</p>
+          <p class="tech-list"><strong>Uses:</strong> Figma</p>
+          <a href="https://www.figma.com/proto/VSTtWck4zLps1R6355GsLE/Example-Things?node-id=1-902&t=TSSJSHhQEO3sePFX-1" target="_blank" rel="noopener noreferrer" class="btn-small">Demo</a>
+        </div>
+
+
+        <div class="project-card">
+          <div class="card-decoration"><img src="media/leaves.png"></div>
+          <h3>Designing this website</h3>
+          <p>Learning how to host static website and exploring capabilities of CSS styling through making this portfolio website</p>
+          <p class="tech-list"><strong>Uses:</strong> HTML, CSS, GitHub</p>
+          <a href="#" class="btn-small">Go To The Website</a>
+          <span style="font-size: 0.6rem; color: rgb(199, 140, 140); align-self: flex-end; font-style: italic;">
+            You are literally in the same website      .
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="section resume">
+      <h2>Resume</h2>
+      <h3>Education</h3>
+      <p>BSC Software Engineering</p>
+      <h3>Experience</h3>
+      <p>IT Intern at Rovski</p>
+      <a href="resume.pdf" class="btn">Download PDF</a>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <h2>Skills</h2>
+      <p><strong>Languages:</strong> Python, Java, C++</p>
+      <p><strong>Web:</strong> HTML, CSS, Laravel</p>
+      <p><strong>Tools:</strong> Git, GitHub, VSC</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h2>Contact</h2>
+      <p>Email: will-put-here@email.com</p>
+      <p>GitHub: <a href="https://github.com/TomatoeNimcha" target="_blank">github.com/TomatoeNimcha</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/" target="_blank">linkedin.com/in/</a></p>
+    </section>
+
+  </main>
+
 </body>
+
 </html>
