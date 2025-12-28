@@ -7,6 +7,11 @@
   <title>My Portfolio</title>
   <link rel="icon" type="image/ico" href="/media/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -27,7 +32,7 @@
   <main class="page">
 
     <!-- TAPE -->
-    <div class="caution-tape">WEBSITE IS STILL UNDER CONSTRUCTION</div>
+    <div class="caution-tape">WEBSITE UNDER CONSTRUCTION</div>
 
     <!-- HERO / INTRO -->
     <section id="hero" class="hero-bg">
@@ -36,13 +41,21 @@
         <p>Software Engineering Graduate | I build systems and software</p>
         <p>Welcome to my portfolio+resume website! It is still under construction.
           <span> <br>
-            <i><small>p/s : some of you might know me as Tomatoe</i></small> 
+            <i><small>p/s : some of you might know me as Tomatoe</i></small>
           </span>
         </p>
+        <ul>
+          <li>Built desktop and web applications with AI/NLP features.</li>
+          <li>Proficient in Python, C++, PHP, JavaScript, and SQL.</li>
+          <li>Used PySide6, Selenium, and spaCy in real projects.</li>
+          <li>Produced clear technical documentation.</li>
+          <li>Focused on usability, testing, and practical problem-solving.</li>
+        </ul>
+
 
         <div class="hero-buttons">
           <a href="#resume" class="btn">View Resume</a>
-          <a href="https://github.com/TomatoeNimcha" class="btn">GitHub</a>
+          <a href="https://github.com/TomatoeNimcha" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
         </div>
       </div>
     </section>
@@ -68,36 +81,44 @@
           <div class="card-decoration"><img src="media/leaves.png"></div>
           <!-- <img src="media/reqconflict.png" alt="Requirement Conflict Detection Screenshot" /> -->
           <h3>Requirement Conflict Detection</h3>
-          <p>Offline desktop application  that automatically detects conflicts in software requirement documents.</p>
+          <hr class="colored-line">
+          <p>Offline desktop application that automatically detects conflicts in software requirement documents.</p>
           <p class="tech-list"><strong>Uses:</strong> Python, PySide6, spaCy (NLP)</p>
-          <a href="https://github.com/TomatoeNimcha/Requirement-Conflict-Detection" target="_blank" rel="noopener noreferrer" class="btn-small">GitHub</a>
+          <a href="https://github.com/TomatoeNimcha/Requirement-Conflict-Detection" target="_blank"
+            rel="noopener noreferrer" class="btn-small">GitHub</a>
         </div>
 
         <div class="project-card">
           <div class="card-decoration"><img src="media/leaves.png"></div>
           <h3>Coding Language Using C++</h3>
+          <hr class="colored-line">
           <p>An attempt at creating basic language with data structures using C++ language.</p>
           <p class="tech-list"><strong>Uses:</strong> C++</p>
-          <a href="https://github.com/TomatoeNimcha/Programming-Language-With-CPP" target="_blank" rel="noopener noreferrer" class="btn-small">GitHub</a>
+          <a href="https://github.com/TomatoeNimcha/Programming-Language-With-CPP" target="_blank"
+            rel="noopener noreferrer" class="btn-small">GitHub</a>
         </div>
 
         <div class="project-card">
           <div class="card-decoration"><img src="media/leaves.png"></div>
           <h3>Web Design about cats</h3>
+          <hr class="colored-line">
           <p>Studying Figma web designer application with cats as inspiration.</p>
           <p class="tech-list"><strong>Uses:</strong> Figma</p>
-          <a href="https://www.figma.com/proto/VSTtWck4zLps1R6355GsLE/Example-Things?node-id=1-902&t=TSSJSHhQEO3sePFX-1" target="_blank" rel="noopener noreferrer" class="btn-small">Demo</a>
+          <a href="https://www.figma.com/proto/VSTtWck4zLps1R6355GsLE/Example-Things?node-id=1-902&t=TSSJSHhQEO3sePFX-1"
+            target="_blank" rel="noopener noreferrer" class="btn-small">Demo</a>
         </div>
 
 
         <div class="project-card">
           <div class="card-decoration"><img src="media/leaves.png"></div>
           <h3>Designing this website</h3>
-          <p>Learning how to host static website and exploring capabilities of CSS styling through making this portfolio website</p>
+          <hr class="colored-line">
+          <p>Learning how to host static website and exploring capabilities of CSS styling through making this portfolio
+            website</p>
           <p class="tech-list"><strong>Uses:</strong> HTML, CSS, GitHub</p>
           <a href="#" class="btn-small">Go To The Website</a>
           <span style="font-size: 0.6rem; color: rgb(199, 140, 140); align-self: flex-end; font-style: italic;">
-            You are literally in the same website      .
+            You are literally in the same website .
           </span>
         </div>
 
@@ -107,11 +128,44 @@
     <!-- RESUME -->
     <section id="resume" class="section resume">
       <h2>Resume</h2>
-      <h3>Education</h3>
-      <p>BSC Software Engineering</p>
-      <h3>Experience</h3>
-      <p>IT Intern at Rovski</p>
-      <a href="resume.pdf" class="btn">Download PDF</a>
+      <div class="resume-paper">
+        <h1> Yasmina Binti Hanafiah </h1>
+        <!-- <p>
+          <br>E-mail: YasminaHanafiah@gmail.com
+          <br>GitHub: https://github.com/TomatoeNimcha 
+        </p> -->
+        <h3>Education</h3>
+        <hr class="colored-line-2">
+        <h4>Multimedia University</h4>
+        <p>Foundation in Computer Science</p>
+        <h4>Multimedia University</h4>
+        <p>Bachelor of Computer Science (Honours), Software Engineering</p>
+        <br>
+
+        <h3>Experience</h3>
+        <hr class="colored-line-2">
+        <h4>IT Department Intern</h4>
+        <p>Rovski Sdn Bhd</p>
+        <ul>
+          <li>Built an internal IT inventory system using Microsoft Lists, Power Apps, SharePoint, and Power Automate.
+          </li>
+          <li>Designed an AI-based IT support assistant using Microsoft 365 tools and Copilot Studio.</li>
+          <li>Designed the layout and structure of the company intranet.</li>
+          <li>Standardized IT department documentation templates.</li>
+          <li>Provided day-to-day IT support, including printer, network, and Microsoft 365 troubleshooting.</li>
+        </ul>
+
+        <h3>Languages</h3>
+        <hr class="colored-line-2">
+        <ul>
+          <li>english</li>
+          <li>malay</li>
+        </ul>
+
+        <a href="media/Yasmina General Resume (Print).pdf" download="Resume-YasminaHanafiah" 
+        target="_blank" rel="noopener noreferrer"
+            class="btn">Download full resume (PDF)</a>
+      </div>
     </section>
 
     <!-- SKILLS -->

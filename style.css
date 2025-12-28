@@ -4,11 +4,16 @@
   --bg: #2c2a47;
   --text: #eac2d2;
   --accent: #8e003d;
+  --accent2: #224d22;
   --card: #c65344;
   --card-hue: var(--accent);
 
   --btn-bg: #2a3db9;
   --btn-text: #bdb8e7;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* ----------------------------- */
@@ -17,7 +22,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:  monospace, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
@@ -141,9 +146,25 @@ body {
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
-.hero-buttons .btn {
+.hero ul {
+  background-image: linear-gradient(to bottom, 
+        var(--accent2) 0%,   
+        var(--accent2) 50%, 
+        var(--bg) 100%   
+    );
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border-left: -1px;
+  color:var(--text);
+  margin-bottom: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.btn {
   display: inline-block;
   margin-right: 1rem;
   padding: 0.5rem 1rem;
@@ -153,7 +174,7 @@ body {
   border-radius: 5px;
 }
 
-.hero-buttons .btn:hover {
+.btn:hover {
   background: var(--accent);
   color: var(--card);
 }
@@ -169,8 +190,6 @@ body {
   margin-bottom: 2rem;
   text-decoration: underline;
 }
-
-
 
 .project-card {
   position: relative;
@@ -192,6 +211,10 @@ body {
   flex: wrap;
 }
 
+/* .project-card h3 {
+  text-decoration: underline;
+} */
+
 .card-decoration img {
   position: absolute;
   width: 100px;
@@ -212,8 +235,26 @@ body {
   object-fit:cover;
 } */
 
-.project-card h3 {
+.project-card h3{
   color: var(--accent);
+}
+
+hr.colored-line {
+  border: none; /* Removes default border */
+  height: 3px; 
+  background-color: var(--accent2); /* Set line color */
+  width: 100%; 
+  margin: 10px auto; 
+  opacity: 70%;
+}
+
+hr.colored-line-2 {
+  border: none; /* Removes default border */
+  height: 3px; 
+  background-color: var(--accent); /* Set line color */
+  width: 100%; 
+  margin: 10px auto; 
+  opacity: 70%;
 }
 
 .project-card h3, p {
@@ -253,6 +294,34 @@ body {
 }
 
 /* RESUME */
+.resume-paper {
+  display: flex;
+  flex-direction: column;
+  padding-top:5rem;
+  padding-left:5rem;
+  padding-right:5rem;
+  padding-bottom: 5rem;
+  color:#2c2a47;
+  background: 
+    linear-gradient(to left bottom, transparent 50%, rgba(17, 9, 55, 0.4) 0) no-repeat 100% 0 / 10em 10em,
+    linear-gradient(-135deg, transparent 7.103em, #e0a3a3 0, #ddbebe); 
+}
+
+.resume-paper ul {
+  padding-left: 5rem;
+}
+
+.resume-paper .btn {
+  align-self: flex-end;
+}
+
+/* .resume-paper h1 {
+
+  background-color: var(--bg);
+  padding: 0 5px;
+} */
+
+
 .resume a.btn {
   margin-top: 1rem;
 }
