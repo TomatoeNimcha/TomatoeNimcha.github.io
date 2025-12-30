@@ -314,15 +314,17 @@ hr.colored-line-2 {
   max-width: 100%;
   width: 100%;
   background: linear-gradient(to bottom, rgb(86, 47, 15), rgb(71, 27, 27));
-  border-bottom: 30px solid #281905;
+  border-bottom: 40px solid #281905;
 }
+
 .resume-paper {
   display: flex;
   flex-direction: column;
-  padding-top:5rem;
+  /* padding-top:5rem;
   padding-left:5rem;
   padding-right:5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 5rem; */
+  padding: 5rem 5rem;
   color:#2c2a47;
   background: 
     linear-gradient(to left bottom, transparent 50%, rgba(17, 9, 55, 0.4) 0) no-repeat 100% 0 / 10em 10em,
@@ -343,6 +345,14 @@ hr.colored-line-2 {
   display:block;
   margin: 0 auto;
   transform: rotate(15deg);
+  overflow:hidden;
+}
+
+.resume-text-gap, .resume-paper h4 {
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  /* text-align: right; */
 }
 
 #skills {
