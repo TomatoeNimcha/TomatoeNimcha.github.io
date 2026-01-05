@@ -1,21 +1,63 @@
 /* I know this CSS file is messy, will clean up later*/
 
 /* ----------------------------- */
+
+@import url("https://fonts.googleapis.com/css?family=Saira:700|Saira:400");
 /* VARIABLES / COLORS */
 :root {
-  --bg: #2c2a47;
-  --text: #eac2d2;
-  --accent: #8e003d;
-  --accent2: #224d22;
-  --card: #c65344;
-  --card-hue: var(--accent);
+  --text: rgba(217, 219, 254);
+  --background: rgba(1, 2, 35);
+  --primary: rgba(142, 144, 226);
+  --secondary: rgba(50, 3, 156);
+  --accent: rgb(54, 41, 155);
 
-  --btn-bg: #2a3db9;
-  --btn-text: #bdb8e7;
+  /* --text: rgba(217, 219, 254);
+  --background: rgba(1, 2, 35); */
+  --primary20: rgba(142, 144, 226, 0.7);
+  --secondary20: rgba(50, 3, 156, 0.2);
+  --accent30: rgba(36, 2, 204, 0.3);
+
+  --card: var(--secondary20);
+  /* --card-gradient: var(--primary70); */
+  --btn-bg: var(--accent);
+  --btn-text: var(--text);
 }
 
 html {
+  font-size: 100%;
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Tomorrow", system-ui, sans-serif;
+  font-weight: 400;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: "Tomorrow", system-ui, sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4.21rem;
+}
+h2 {
+  font-size: 2.158rem;
+  text-decoration: underline;
+  margin-bottom: 2rem;
+}
+h3 {
+  font-size: 1.369rem;
+}
+h4 {
+  font-size: 0.777rem;
+}
+h5 {
+  font-size: 1.333rem;
+}
+
+small {
+  font-size: 0.75rem;
 }
 
 /* ----------------------------- */
@@ -24,16 +66,16 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family:  monospace, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Tomorrow", monospace, -apple-system, BlinkMacSystemFont,
+    sans-serif;
 }
 
 body {
-  background: var(--bg);
+  background: var(--background);
   color: var(--text);
   line-height: 1.6;
   padding-top: 60px; /* navbar height */
 }
-
 
 .caution-tape {
   width: 100%;
@@ -43,15 +85,13 @@ body {
   --stripe: 30px;
   --angle: 45deg;
 
-  background:
-    repeating-linear-gradient(
-      var(--angle),
-      rgba(255,255,0,0.5) 0 calc(var(--stripe)),
-      rgba(0,0,0,0.5) calc(var(--stripe)) calc(var(--stripe) * 2)
-    );
+  background: repeating-linear-gradient(
+    var(--angle),
+    rgba(255, 255, 0, 0.5) 0 calc(var(--stripe)),
+    rgba(0, 0, 0, 0.5) calc(var(--stripe)) calc(var(--stripe) * 2)
+  );
 
-  background-size:
-    calc((var(--stripe) * 2) / cos(var(--angle))) 100%;
+  background-size: calc((var(--stripe) * 2) / cos(var(--angle))) 100%;
 
   animation: slide 40s linear infinite;
 
@@ -64,13 +104,13 @@ body {
 }
 
 @keyframes slide {
-  from { background-position: 0 0; }
-  to   { background-position: 100% 0; }
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
 }
-
-
-
-
 
 /* ----------------------------- */
 /* NAVBAR */
@@ -80,7 +120,7 @@ body {
   left: 0;
   width: 100%;
   height: 60px;
-  background: var(--card);
+  background: var(--secondary);
   color: var(--text);
   display: flex;
   justify-content: space-between;
@@ -125,151 +165,65 @@ body {
   padding: 4rem 1.5rem;
 }
 
-/* HERO */
-/* .hero {
-  max-width: 100%;
-  width: 95%;
-  background-color: aqua;
-  padding: 4rem 0;
-} */
-
 .hero-bg {
   max-width: 100%;
-  width: 100%;
-  background: linear-gradient(to bottom, rgb(39, 3, 14), rgba(255, 0, 0, 0));
-}
-
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  text-align: justify;
 }
 
 .hero ul {
-  position:relative;
-  background-image: linear-gradient(to bottom, 
-        var(--accent2) 0%,   
-        var(--accent2) 50%, 
-        var(--bg) 100%   
-    );
+  position: relative;
+  background-image: linear-gradient(
+    to bottom,
+    var(--accent2) 0%,
+    var(--accent2) 50%,
+    var(--bg) 100%
+  );
   padding: 1rem 2rem;
   border-radius: 10px;
   border-left: -1px;
-  color:var(--text);
+  color: var(--text);
   margin-bottom: 1.5rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
-.bush_leaf img {
-  position: absolute;
-  width: 90px;
-  height: auto; 
-  /* transform:rotate(-30deg); */
-  /* background-color: yellowgreen;  */
-  top: -35px;
-  right: -40px; 
-  /* mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
-  z-index: 10;  */
-}
 
-.btn {
-  display: inline-block;
-  margin-right: 1rem;
-  padding: 0.5rem 1rem;
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  background: var(--accent);
-  color: var(--card);
-}
 
 /* PROJECTS */
 .project-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.section h2 {
-  margin-bottom: 2rem;
-  text-decoration: underline;
+  gap: 1rem;
 }
 
 .project-card {
   position: relative;
   /* background: var(--card); */
-  display:flex;
+  display: flex; /* This makes the card itself a flex container for its *own* children */
   flex-direction: column;
   flex-basis: calc(33.33% - 2rem);
-  flex-grow: 1; 
-
-  background: linear-gradient(
-    to bottom,
-    var(--card) 0%,
-    var(--card) 60%,
-    var(--card-hue) 100%
-  );
+  flex-grow: 1;
+  background: linear-gradient(to bottom, var(--card) 30%, var(--card) 30%);
 
   padding: 1.5rem;
   border-radius: 20px;
-  flex: wrap;
-}
-
-/* .project-card h3 {
-  text-decoration: underline;
-} */
-
-.card-decoration img {
-  position: absolute;
-  width: 100px;
-  height: auto; 
-  /* background-color: yellowgreen; */
-  top: -60px;
-  right: 20px; 
-  mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
-  /* z-index: 10; */
-  
-}
-
-/* .project-card img {
-  width: 150px;
-  height: 150px;
-  border: #2c2a47 solid 5px;
-  
-  object-fit:cover;
-} */
-
-.project-card h3{
-  color: var(--accent);
+  /* 'flex: wrap;' was the invalid line and has been removed */
 }
 
 hr.colored-line {
   border: none; /* Removes default border */
-  height: 3px; 
-  background-color: var(--accent2); /* Set line color */
-  width: 100%; 
-  margin: 10px auto; 
+  height: 3px;
+  background-color: var(--accent); /* Set line color */
+  width: 100%;
+  margin: 10px auto;
   opacity: 70%;
 }
 
 hr.colored-line-2 {
   border: none; /* Removes default border */
-  height: 3px; 
+  height: 3px;
   background-color: var(--accent); /* Set line color */
-  width: 100%; 
-  margin: 10px auto; 
+  width: 100%;
+  margin: 10px auto;
   opacity: 70%;
 }
 
@@ -292,6 +246,7 @@ hr.colored-line-2 {
 }
 
 .btn-small {
+  display: inline-block;
   padding: 0.3rem 0.7rem;
   background: var(--btn-bg);
   color: var(--btn-text);
@@ -301,31 +256,46 @@ hr.colored-line-2 {
   /* margin-top: auto;
   align-self: space-between; */
   align-self: flex-end;
-
 }
 
-.btn-small:hover {
-  background: var(--accent);
-  color: var(--card);
+.btn {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  text-decoration: none;
+  border-radius: 5px;
 }
 
+.btn:hover , .btn-small:hover {
+  background: var(--primary20);
+  color: var(--background);
+}
 /* RESUME */
 .resume-bg {
   max-width: 100%;
   width: 100%;
-  background: linear-gradient(to bottom, rgb(86, 47, 15), rgb(71, 27, 27));
-  border-bottom: 40px solid #281905;
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--accent), 0.5),
+    rgba(0, 0, 0, 0) 70%
+  );
 }
 
 .resume-paper {
   display: flex;
   flex-direction: column;
-  overflow:hidden;
+  overflow: hidden;
   padding: 5rem 5rem;
-  color:#2c2a47;
-  background: 
-    linear-gradient(to left bottom, transparent 50%, rgba(17, 9, 55, 0.4) 0) no-repeat 100% 0 / 10em 10em,
-    linear-gradient(-135deg, transparent 7.103em, #e0a3a3 0, #ddbebe); 
+  color: #2c2a47;
+  background: linear-gradient(
+        to left bottom,
+        transparent 50%,
+        rgba(17, 9, 55, 0.4) 0
+      )
+      no-repeat 100% 0 / 10em 10em,
+    linear-gradient(-135deg, transparent 7.103em, #a4a3e0 0, #cabedd);
 }
 
 .resume-paper ul {
@@ -336,31 +306,17 @@ hr.colored-line-2 {
   align-self: flex-end;
 }
 
-.resume-pen {
-  width:600px;
-  height:auto;
-  display:block;
-  margin: 0 auto;
-  transform: rotate(15deg);
-}
-
-.resume-text-gap, .resume-paper h4 {
+.resume-text-gap,
+.resume-paper h4 {
   display: flex;
   justify-content: space-between;
-  width:100%;
+  width: 100%;
   /* text-align: right; */
 }
 
 #skills {
-  scroll-margin-top: 100px; 
+  scroll-margin-top: 100px;
 }
-
-/* .resume-paper h1 {
-
-  background-color: var(--bg);
-  padding: 0 5px;
-} */
-
 
 .resume a.btn {
   margin-top: 1rem;
