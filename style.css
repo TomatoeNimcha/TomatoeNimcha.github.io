@@ -320,10 +320,7 @@ hr.colored-line-2 {
 .resume-paper {
   display: flex;
   flex-direction: column;
-  /* padding-top:5rem;
-  padding-left:5rem;
-  padding-right:5rem;
-  padding-bottom: 5rem; */
+  overflow:hidden;
   padding: 5rem 5rem;
   color:#2c2a47;
   background: 
@@ -345,7 +342,6 @@ hr.colored-line-2 {
   display:block;
   margin: 0 auto;
   transform: rotate(15deg);
-  overflow:hidden;
 }
 
 .resume-text-gap, .resume-paper h4 {
