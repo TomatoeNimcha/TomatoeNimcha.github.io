@@ -31,6 +31,7 @@ html {
 body {
   font-family: "Tomorrow", system-ui, sans-serif;
   font-weight: 400;
+
 }
 
 h1,h2,h3,h4,h5 {
@@ -71,10 +72,26 @@ small {
 }
 
 body {
-  background: var(--background);
+  /* background: var(--background); */
   color: var(--text);
   line-height: 1.6;
   padding-top: 60px; /* navbar height */
+
+    background: linear-gradient(
+    -45deg,
+    var(--background),
+    var(--secondary),
+    var(--background)
+  );
+
+  background-size: 400% 400%;
+  animation: gradientFlow 60s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
 }
 
 .caution-tape {
@@ -203,6 +220,7 @@ body {
   flex-basis: calc(33.33% - 2rem);
   flex-grow: 1;
   background: linear-gradient(to bottom, var(--card) 30%, var(--card) 30%);
+  /* backdrop-filter: invert(5%); */
 
   padding: 1.5rem;
   border-radius: 20px;
