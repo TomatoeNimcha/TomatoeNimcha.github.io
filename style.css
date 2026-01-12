@@ -31,7 +31,6 @@ html {
 body {
   font-family: "Tomorrow", system-ui, sans-serif;
   font-weight: 400;
-
 }
 
 h1,h2,h3,h4,h5 {
@@ -67,7 +66,7 @@ small {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Tomorrow", monospace, -apple-system, BlinkMacSystemFont,
+  font-family: "Tomorrow", monospace, -apple-system, BchainlinkMacSystemFont,
     sans-serif;
 }
 
@@ -77,7 +76,7 @@ body {
   line-height: 1.6;
   padding-top: 60px; /* navbar height */
 
-    background: linear-gradient(
+  background: linear-gradient(
     -45deg,
     var(--background),
     var(--secondary),
@@ -89,9 +88,15 @@ body {
 }
 
 @keyframes gradientFlow {
-    0%{background-position:0% 2%}
-    50%{background-position:100% 99%}
-    100%{background-position:0% 2%}
+  0% {
+    background-position: 0% 2%;
+  }
+  50% {
+    background-position: 100% 99%;
+  }
+  100% {
+    background-position: 0% 2%;
+  }
 }
 
 .caution-tape {
@@ -121,15 +126,88 @@ body {
 }
 
 @keyframes slide {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 100% 0;
-  }
+  from {background-position: 0 0;}
+  to {background-position: 100% 0;}
+}
+
+/* keychain */
+:root {
+  --swing-time: 2s;
+  --chainlink-color: #6f6c7b; /* Darker silver for visibility */
+}
+
+.keychain {
+  display: flex;
+  justify-content: right;
+  position: absolute;
+  right: 5rem;
+  top: 3rem;
+}
+
+.keyring {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--primary);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.397);
+  box-shadow: 5px 10px 7px 1px rgba(0, 0, 0, 0.331) inset;
+}
+
+.keyring > .chainlink {
+  top: 40px; /* position between ring and link */
+  left: 15px; /* center link to ring */
+}
+
+.chainlink {
+  width: 15px;
+  height: 20px;
+  border: 3px solid var(--primary);
+  border-radius: 10px;
+  position: absolute;
+  top: 10px; /* Hang below previous link/ring */
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.397);
+  
+  /* Swing from keyring */
+  transform-origin: top center;
+  animation: swing var(--swing-time) ease-in-out infinite alternate;
+}
+
+/* Delay between chainlinks */
+.chainlink > .chainlink {
+  animation-delay: 0.15s; 
+}
+
+.tag {
+  width: 90px;
+  height: 50px;
+  background: var(--primary20);
+  border-radius: 4px;
+  border: 4px solid var(--primary);
+  position: absolute;
+  top: 18px;
+  left: -40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+  
+  /* Swing tag */
+  transform-origin: top center;
+  animation: swing var(--swing-time) ease-in-out infinite alternate;
+  animation-delay: 0.3s;
+
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.397);
+}
+
+@keyframes swing {
+  from { transform: rotate(-10deg); }
+  to { transform: rotate(10deg); }
 }
 
 /* ----------------------------- */
+
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -203,8 +281,6 @@ body {
   margin-right: 2rem;
 }
 
-
-
 /* PROJECTS */
 .project-cards {
   display: flex;
@@ -215,7 +291,7 @@ body {
 .project-card {
   position: relative;
   /* background: var(--card); */
-  display: flex; /* This makes the card itself a flex container for its *own* children */
+  display: flex; 
   flex-direction: column;
   flex-basis: calc(33.33% - 2rem);
   flex-grow: 1;
@@ -224,9 +300,9 @@ body {
 
   padding: 1.5rem;
   border-radius: 20px;
-  /* 'flex: wrap;' was the invalid line and has been removed */
 }
 
+/*this is used on the project cards*/
 hr.colored-line {
   border: none; /* Removes default border */
   height: 3px;
@@ -236,6 +312,7 @@ hr.colored-line {
   opacity: 70%;
 }
 
+/* This is used on the resume page */
 hr.colored-line-2 {
   border: none; /* Removes default border */
   height: 3px;
@@ -245,7 +322,8 @@ hr.colored-line-2 {
   opacity: 70%;
 }
 
-.project-card h3, p {
+.project-card h3,
+p {
   margin-bottom: 0.5rem;
 }
 
@@ -286,7 +364,8 @@ hr.colored-line-2 {
   border-radius: 5px;
 }
 
-.btn:hover , .btn-small:hover {
+.btn:hover,
+.btn-small:hover {
   background: var(--primary20);
   color: var(--background);
 }
