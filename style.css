@@ -384,6 +384,12 @@ p {
   align-self: flex-start;
 }
 
+.btn-horizontal-container {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: flex-end;
+}
+
 .btn-small {
   display: inline-block;
   padding: 0.3rem 0.7rem;
